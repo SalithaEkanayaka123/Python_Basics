@@ -63,3 +63,20 @@ elif has_java_skill and has_backend_experience:
 else:
     print("You are not eligible for the backend developer role.")
 
+
+# Difference between == and is
+a = [1, 2, 3]
+b = [1, 2, 3]
+
+print(a == b)  # True
+print(a is b)  # False
+
+# How is Python if different from Java if?
+
+# In Java if condition define by curly braces {}, in python if codition define by indentation, 
+# python also does not require parentheses aorund the condtion. 
+
+# What are truthy and falsy values?
+
+# In Python, values like 0, empty string "", empty list [], empty dictionary {}, and None are treated as false. 
+# Non-empty values are treated as true.

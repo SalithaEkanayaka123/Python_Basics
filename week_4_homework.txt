@@ -1,0 +1,99 @@
+Day 4 exercises
+
+Complete these after the mini project.
+
+Exercise 1
+
+Create a dictionary for your profile:
+
+name
+role
+experience
+main_skill
+target_skill
+
+Print each key and value.
+
+Exercise 2
+
+Create a list of 3 job applications using dictionaries.
+
+Each application should have:
+
+company
+role
+status
+location
+
+Print all applications.
+
+Exercise 3
+
+From this list:
+
+skills = ["Java", "Python", "Java", "SQL", "Python", "Docker"]
+
+Print only unique skills.
+
+Exercise 4
+
+Create a tuple:
+
+valid_roles = ("Software Engineer", "Senior Software Engineer", "Tech Lead")
+
+Ask the user to enter a role.
+
+Print:
+
+Valid role
+
+or
+
+Invalid role
+Exercise 5
+
+Create a list of applications:
+
+applications = [
+    {"company": "WSO2", "status": "applied"},
+    {"company": "IFS", "status": "interview"},
+    {"company": "Virtusa", "status": "applied"},
+    {"company": "Hatchyard", "status": "rejected"}
+]
+
+Count how many applications are in each status.
+
+Expected output:
+
+applied: 2
+interview: 1
+rejected: 1
+Exercise 6
+
+Search for company "IFS" in the above list.
+
+Print:
+
+IFS application found
+
+or
+
+IFS application not found
+Exercise 7
+
+Create this dictionary:
+
+status_messages = {
+    "applied": "Waiting for response",
+    "interview": "Prepare for interview",
+    "rejected": "Improve and apply again",
+    "selected": "Congratulations"
+}
+
+Ask the user to enter a status.
+
+Use .get() to print the message.
+
+If the status does not exist, print:
+
+Unknown status

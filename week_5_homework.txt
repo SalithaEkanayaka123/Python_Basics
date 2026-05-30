@@ -1,0 +1,166 @@
+Interview theory from today
+Question 1: What is a function in Python?
+
+Answer:
+
+A function is a reusable block of code defined using the def keyword. It can accept parameters, perform logic, and optionally return a value.
+
+Question 2: What is the difference between parameter and argument?
+
+Answer:
+
+A parameter is the variable defined in the function declaration. An argument is the actual value passed when calling the function.
+
+Example:
+
+def greet(name):  # name is parameter
+    print(name)
+
+
+greet("Salitha")  # "Salitha" is argument
+Question 3: What is a default parameter?
+
+Answer:
+
+A default parameter provides a default value when the caller does not pass that argument.
+
+def create_user(role="user"):
+    return role
+Question 4: Why are type hints useful?
+
+Answer:
+
+Type hints improve readability, IDE support, maintainability, and help tools detect possible type issues. They do not make Python strictly typed at runtime.
+
+Question 5: Why should we avoid large functions?
+
+Answer:
+
+Large functions are difficult to read, test, debug, and maintain. Small functions with one responsibility improve code quality.
+
+Question 6: What is the mutable default argument issue?
+
+Answer:
+
+If we use a mutable object like a list or dictionary as a default argument, Python can reuse the same object across multiple function calls. This can cause unexpected behavior.
+
+Bad:
+
+def add_item(item, items=[]):
+    items.append(item)
+    return items
+
+Good:
+
+def add_item(item, items=None):
+    if items is None:
+        items = []
+
+    items.append(item)
+    return items
+Day 5 exercises
+
+Complete these in the same file or create:
+
+week01_basics/day05_exercises.py
+Exercise 1
+
+Create a function:
+
+def calculate_total(numbers):
+
+It should return the total of a list of numbers.
+
+Example:
+
+print(calculate_total([10, 20, 30]))
+
+Expected:
+
+60
+Exercise 2
+
+Create a function:
+
+def find_highest_salary(salaries):
+
+Input:
+
+[200000, 266000, 350000, 400000]
+
+Expected:
+
+400000
+
+Do it using a loop first, not max().
+
+Exercise 3
+
+Create a function:
+
+def is_valid_role(role):
+
+Valid roles:
+
+("Software Engineer", "Senior Software Engineer", "Tech Lead")
+
+Return True or False.
+
+Exercise 4
+
+Create a function:
+
+def count_skills(skills):
+
+Input:
+
+["Java", "Python", "Java", "SQL", "Python"]
+
+Expected output:
+
+{
+    "Java": 2,
+    "Python": 2,
+    "SQL": 1
+}
+Exercise 5
+
+Create a function:
+
+def filter_applications_by_status(applications, status):
+
+Input:
+
+applications = [
+    {"company": "WSO2", "status": "applied"},
+    {"company": "IFS", "status": "interview"},
+    {"company": "Virtusa", "status": "applied"}
+]
+
+Call:
+
+filter_applications_by_status(applications, "applied")
+
+Expected:
+
+[
+    {"company": "WSO2", "status": "applied"},
+    {"company": "Virtusa", "status": "applied"}
+]
+Exercise 6
+
+Create a function:
+
+def build_application_summary(application):
+
+Input:
+
+{
+    "company": "WSO2",
+    "role": "Backend Engineer",
+    "status": "applied"
+}
+
+Expected:
+
+WSO2 - Backend Engineer - applied

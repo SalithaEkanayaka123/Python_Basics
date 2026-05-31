@@ -1,0 +1,105 @@
+Question 1: What is exception handling?
+
+Answer:
+
+Exception handling is used to handle runtime errors without crashing the program. In Python, we use try, except, and optionally finally.
+
+Question 2: What is the difference between except Exception and specific exceptions?
+
+Answer:
+
+Specific exceptions like ValueError or FileNotFoundError are better because they handle known problems clearly. Catching general Exception can hide unexpected bugs.
+
+Question 3: What is JSON?
+
+Answer:
+
+JSON is a lightweight data format used for exchanging data between systems. It is commonly used in REST APIs. Python provides the json module to read and write JSON data.
+
+Question 4: What does json.dump() do?
+
+Answer:
+
+json.dump() writes Python data into a JSON file.
+
+Example:
+
+json.dump(data, file, indent=4)
+Question 5: What does json.load() do?
+
+Answer:
+
+json.load() reads JSON data from a file and converts it into Python objects such as dictionaries or lists.
+
+Question 6: Why use with open()?
+
+Answer:
+
+with open() automatically closes the file after reading or writing. It is safer and cleaner than manually opening and closing files.
+
+Day 6 exercises
+
+Create:
+
+week01_basics/day06_exercises.py
+Exercise 1
+
+Ask the user to enter a number.
+
+Handle invalid input using try/except.
+
+Enter number: abc
+Invalid number
+Exercise 2
+
+Create a function:
+
+def divide_numbers(a: int, b: int) -> float:
+
+Handle division by zero.
+
+Exercise 3
+
+Create a dictionary:
+
+profile = {
+    "name": "Salitha",
+    "role": "Backend Developer"
+}
+
+Try to access "salary" using direct key access and handle KeyError.
+
+Exercise 4
+
+Create a list of skills:
+
+skills = ["Java", "Python", "SQL"]
+
+Save it into:
+
+skills.json
+Exercise 5
+
+Read skills.json and print all skills.
+
+Expected:
+
+Java
+Python
+SQL
+Exercise 6
+
+Create a list of job applications and save it into job_applications.json.
+
+Example:
+
+applications = [
+    {"company": "WSO2", "role": "Backend Engineer", "status": "applied"},
+    {"company": "IFS", "role": "Software Engineer", "status": "interview"}
+]
+Exercise 7
+
+Read job_applications.json and print output like this:
+
+WSO2 - Backend Engineer - applied
+IFS - Software Engineer - interview

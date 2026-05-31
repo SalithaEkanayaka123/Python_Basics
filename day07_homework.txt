@@ -1,0 +1,140 @@
+Question 1: What is list comprehension?
+
+Answer:
+
+List comprehension is a concise way to create a new list from an existing iterable by applying an expression and optional condition.
+
+Example:
+
+even_numbers = [number for number in numbers if number % 2 == 0]
+Question 2: What is the difference between sort() and sorted()?
+
+Answer:
+
+sort() modifies the original list. sorted() returns a new sorted list and keeps the original list unchanged.
+
+Question 3: What is lambda?
+
+Answer:
+
+Lambda is an anonymous function used for small, simple operations. It is commonly used with sorted, map, and filter.
+
+Question 4: Difference between map() and filter()?
+
+Answer:
+
+map() transforms each item. filter() selects items that match a condition.
+
+Example:
+
+numbers = [1, 2, 3]
+
+doubled = list(map(lambda n: n * 2, numbers))
+even = list(filter(lambda n: n % 2 == 0, numbers))
+Question 5: When should you avoid list comprehension?
+
+Answer:
+
+Avoid list comprehension when the logic becomes too complex. In that case, a normal loop is more readable and maintainable.
+
+Good:
+
+active_users = [user for user in users if user["active"]]
+
+Too complex:
+
+# Hard to read if multiple nested conditions and transformations are added
+
+Use a normal function or loop instead.
+
+Day 7 exercises
+
+Create:
+
+week01_basics/day07_exercises.py
+Exercise 1
+
+Given:
+
+numbers = [1, 2, 3, 4, 5]
+
+Create a new list with squared values using list comprehension.
+
+Expected:
+
+[1, 4, 9, 16, 25]
+Exercise 2
+
+Given:
+
+numbers = [10, 15, 20, 25, 30]
+
+Create a list with only even numbers.
+
+Expected:
+
+[10, 20, 30]
+Exercise 3
+
+Given:
+
+skills = ["java", "python", "sql", "docker"]
+
+Create uppercase skills using list comprehension.
+
+Expected:
+
+["JAVA", "PYTHON", "SQL", "DOCKER"]
+Exercise 4
+
+Given:
+
+applications = [
+    {"company": "WSO2", "status": "applied"},
+    {"company": "IFS", "status": "interview"},
+    {"company": "Virtusa", "status": "applied"},
+    {"company": "Hatchyard", "status": "rejected"}
+]
+
+Create a list containing only applied applications.
+
+Exercise 5
+
+Using the same application list, create a list of company names.
+
+Expected:
+
+["WSO2", "IFS", "Virtusa", "Hatchyard"]
+Exercise 6
+
+Sort these applications by company name:
+
+applications = [
+    {"company": "Virtusa", "status": "applied"},
+    {"company": "IFS", "status": "interview"},
+    {"company": "WSO2", "status": "applied"}
+]
+
+Expected order:
+
+IFS
+Virtusa
+WSO2
+Exercise 7
+
+Use any() to check whether "Python" exists in this list:
+
+skills = ["Java", "Spring Boot", "SQL", "Python"]
+
+Expected:
+
+True
+Exercise 8
+
+Use all() to check whether all salaries are greater than 200000.
+
+salaries = [250000, 300000, 350000]
+
+Expected:
+
+True

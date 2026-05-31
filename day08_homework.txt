@@ -1,0 +1,167 @@
+Question 1: What is a class in Python?
+
+Answer:
+
+A class is a blueprint for creating objects. It defines attributes and methods that represent the behavior and state of an object.
+
+Question 2: What is an object?
+
+Answer:
+
+An object is an instance of a class. It contains actual data and can use the methods defined in the class.
+
+Question 3: What is self?
+
+Answer:
+
+self refers to the current object instance. It allows access to instance variables and methods inside the class.
+
+Question 4: What is __init__?
+
+Answer:
+
+__init__ is a special method used to initialize object attributes when an object is created.
+
+Question 5: Is self a keyword?
+
+Answer:
+
+No. self is not a reserved keyword, but it is the standard convention in Python. We should always use self for readability and consistency.
+
+Question 6: What is inheritance?
+
+Answer:
+
+Inheritance allows one class to reuse or extend the behavior of another class. The child class can access parent class methods and can also override them.
+
+Question 7: What is method overriding?
+
+Answer:
+
+Method overriding happens when a child class provides its own implementation of a method already defined in the parent class.
+
+Question 8: What is super()?
+
+Answer:
+
+super() is used to call a method from the parent class, commonly the parent class constructor.
+
+Day 8 exercises
+
+Create:
+
+week02_oop/day08_exercises.py
+Exercise 1
+
+Create a class called Developer.
+
+Attributes:
+
+name
+main_skill
+experience
+
+Method:
+
+display_profile()
+
+Expected output:
+
+Salitha - Java - 4 years
+Exercise 2
+
+Create a class called SkillTracker.
+
+It should store a list of skills.
+
+Methods:
+
+add_skill(skill)
+view_skills()
+has_skill(skill)
+
+Example:
+
+tracker = SkillTracker()
+tracker.add_skill("Python")
+tracker.add_skill("FastAPI")
+tracker.view_skills()
+print(tracker.has_skill("Python"))
+Exercise 3
+
+Create a class called SalaryCalculator.
+
+Method:
+
+calculate_increment_percentage(current_salary, expected_salary)
+
+Example:
+
+calculator = SalaryCalculator()
+print(calculator.calculate_increment_percentage(266000, 350000))
+Exercise 4
+
+Create a parent class:
+
+Employee
+
+Attributes:
+
+name
+role
+
+Method:
+
+display()
+
+Create child class:
+
+SoftwareEngineer
+
+Extra attribute:
+
+primary_language
+
+Override display().
+
+Expected output:
+
+Salitha - Software Engineer - Java
+Exercise 5
+
+Create a class called InterviewQuestion.
+
+Attributes:
+
+question
+answer
+difficulty
+
+Method:
+
+display_question()
+
+Create 3 interview questions and print them using a loop.
+
+Exercise 6
+
+Create a class called ApplicationStatus.
+
+Attributes:
+
+company
+status
+
+Method:
+
+is_active()
+
+Return True if status is:
+
+applied
+interview
+
+Return False if status is:
+
+rejected
+selected

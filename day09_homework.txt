@@ -1,0 +1,88 @@
+1. What is @staticmethod?
+
+@staticmethod defines a method inside a class that does not need access to instance data or class data. It is useful for utility methods.
+
+2. What is @classmethod?
+
+@classmethod receives the class as the first parameter using cls. It can access class variables and is commonly used as an alternative constructor.
+
+3. What is @property?
+
+@property allows controlled access to class attributes. It works like a getter and can be combined with a setter for validation.
+
+4. What is a dataclass?
+
+A dataclass is a Python class mainly used to store data. It automatically generates methods such as __init__ and __repr__.
+
+5. What is an abstract class?
+
+An abstract class defines a contract that child classes must implement. In Python, we use ABC and @abstractmethod.
+
+Day 9 exercises
+
+Create:
+
+week02_oop/day09_exercises.py
+Exercise 1
+
+Create a Developer dataclass with:
+
+name
+main_skill
+experience
+
+Add method:
+
+display_profile()
+
+Expected output:
+
+Salitha - Java - 4 years
+Exercise 2
+
+Create a RoleValidator class.
+
+Add static method:
+
+is_valid_role(role: str) -> bool
+
+Valid roles:
+
+("Software Engineer", "Senior Software Engineer", "Tech Lead")
+Exercise 3
+
+Create a JobApplication class with property validation for status.
+
+Valid statuses:
+
+("applied", "interview", "rejected", "selected")
+
+If invalid status is assigned, raise:
+
+ValueError("Invalid status")
+Exercise 4
+
+Create an abstract class:
+
+PaymentService
+
+Abstract method:
+
+pay(amount)
+
+Create two child classes:
+
+CardPaymentService
+BankTransferPaymentService
+
+Each class should implement pay().
+
+Exercise 5
+
+Create a class method:
+
+create_default_application(company, role)
+
+It should create a job application with default status:
+
+applied

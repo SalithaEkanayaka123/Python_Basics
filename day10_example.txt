@@ -1,0 +1,148 @@
+1. What is __str__?
+
+__str__ returns a user-friendly string representation of an object. It is used when calling print() or str().
+
+2. What is __repr__?
+
+__repr__ returns a developer-friendly representation of an object. It is mainly useful for debugging.
+
+3. Difference between __str__ and __repr__?
+
+__str__ is for users. __repr__ is for developers and debugging. If __str__ is not defined, Python may use __repr__.
+
+4. What is __eq__?
+
+__eq__ defines how two objects are compared using ==.
+
+5. Why did app1 == app2 return false before using __eq__?
+
+Because Python compares object identity by default. Even if two objects contain the same values, they are different objects in memory unless equality is customized.
+
+6. What is __len__?
+
+__len__ allows an object to work with the built-in len() function.
+
+7. What is __dict__?
+
+__dict__ stores an object’s attributes as a dictionary.
+
+Java comparison
+Java concept	Python concept
+toString()	__str__()
+equals()	__eq__()
+POJO field values	__dict__
+custom object behavior	special methods
+collection size method	__len__() with len()
+Day 10 exercises
+
+Create:
+
+week02_oop/day10_exercises.py
+Exercise 1
+
+Create a class:
+
+Developer
+
+Attributes:
+
+name
+skill
+experience
+
+Implement:
+
+__str__
+__repr__
+
+Expected:
+
+print(developer)
+Salitha - Java - 4 years
+
+print(repr(developer))
+Developer(name='Salitha', skill='Java', experience=4)
+Exercise 2
+
+Create a class:
+
+Skill
+
+Attributes:
+
+name
+level
+
+Implement __eq__.
+
+Two skills should be equal if their names are the same, ignoring case.
+
+Example:
+
+skill1 = Skill("Python", "Beginner")
+skill2 = Skill("python", "Advanced")
+
+print(skill1 == skill2)
+
+Expected:
+
+True
+Exercise 3
+
+Create a class:
+
+SkillTracker
+
+It should store a list of skills.
+
+Implement:
+
+add_skill(skill)
+view_skills()
+__len__()
+
+Example:
+
+tracker = SkillTracker()
+tracker.add_skill("Python")
+tracker.add_skill("FastAPI")
+
+print(len(tracker))
+
+Expected:
+
+2
+Exercise 4
+
+Create a class:
+
+SalaryExpectation
+
+Attributes:
+
+current_salary
+expected_salary
+
+Implement:
+
+__str__
+increase_percentage()
+
+Expected:
+
+Current: 266000, Expected: 350000, Increase: 31.58%
+Exercise 5
+
+Create a class:
+
+InterviewQuestion
+
+Attributes:
+
+question
+answer
+difficulty
+
+Implement __str__.
+
+Create a list of 3 questions and print them using a loop.

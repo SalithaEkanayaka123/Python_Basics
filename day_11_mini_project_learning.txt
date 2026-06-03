@@ -1,0 +1,21 @@
+7. What this project teaches
+
+You now have:
+
+JobApplication          -> data/model class
+NotificationService     -> abstract contract
+EmailNotificationService
+SmsNotificationService
+ConsoleNotificationService
+ApplicationTracker      -> service/business class
+
+This is a strong OOP design pattern.
+
+Most important part:
+
+def __init__(self, notification_service: NotificationService):
+    self.notification_service = notification_service
+
+This means the tracker does not care whether the notification is email, SMS, or console.
+
+That is polymorphism + composition.

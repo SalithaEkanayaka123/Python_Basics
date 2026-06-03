@@ -1,0 +1,120 @@
+Question 1: What is polymorphism?
+
+Answer:
+
+Polymorphism means the same method call can behave differently depending on the object. In Python, different classes can implement the same method, and the caller can use them in the same way.
+
+Question 2: What is duck typing?
+
+Answer:
+
+Duck typing means Python checks whether an object has the required behavior instead of checking its exact type. If an object has the required method, it can be used.
+
+Question 3: What is composition?
+
+Answer:
+
+Composition means one class contains or uses another class. It represents a has-a relationship and helps create flexible and maintainable designs.
+
+Question 4: Inheritance vs composition?
+Concept	Meaning	Example
+Inheritance	is-a relationship	EmailNotification is a NotificationService
+Composition	has-a relationship	ApplicationTracker has a NotificationService
+
+Interview answer:
+
+Use inheritance when there is a clear is-a relationship. Use composition when one class needs to use another class’s behavior. Composition is often more flexible.
+
+Question 5: How is this similar to Spring Boot?
+
+Answer:
+
+In Spring Boot, we usually inject services through constructors. In Python, we can follow a similar idea by passing dependencies through the constructor. This makes the code easier to test and extend.
+
+Day 11 exercises
+
+Create:
+
+week02_oop/day11_exercises.py
+Exercise 1
+
+Create an abstract class:
+
+PaymentService
+
+With method:
+
+pay(amount: float)
+
+Create two implementations:
+
+CardPaymentService
+BankTransferPaymentService
+
+Each should print a different payment message.
+
+Exercise 2
+
+Create a function:
+
+process_payment(payment_service, amount)
+
+It should call:
+
+payment_service.pay(amount)
+
+Test it with both payment services.
+
+This shows polymorphism.
+
+Exercise 3
+
+Create a class:
+
+OrderService
+
+It should receive PaymentService through the constructor.
+
+class OrderService:
+    def __init__(self, payment_service):
+        self.payment_service = payment_service
+
+Add method:
+
+place_order(amount)
+
+Inside it, call payment service.
+
+This shows composition.
+
+Exercise 4
+
+Create notification services:
+
+EmailNotification
+SmsNotification
+
+Both should have:
+
+send(message)
+
+Create a function that can send notification using either service.
+
+Exercise 5
+
+Create a MockNotificationService.
+
+It should store messages in a list instead of printing.
+
+Example:
+
+class MockNotificationService:
+    def __init__(self):
+        self.messages = []
+
+    def send(self, message):
+        self.messages.append(message)
+
+Use it with ApplicationTracker.
+
+This is important for future testing.

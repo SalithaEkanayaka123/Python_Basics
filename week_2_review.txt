@@ -1,0 +1,156 @@
+Question 1: What is a class in Python?
+
+Answer:
+
+A class is a blueprint for creating objects. It defines the attributes and methods that objects of that class will have.
+
+Example:
+
+class Developer:
+    pass
+Question 2: What is an object?
+
+Answer:
+
+An object is an instance of a class. It contains actual data and can use the behavior defined in the class.
+
+Question 3: What is self?
+
+Answer:
+
+self refers to the current object instance. It is used to access instance variables and methods inside the class.
+
+Java comparison:
+
+Java this  -> Python self
+Question 4: What is __init__?
+
+Answer:
+
+__init__ is a special method used to initialize object attributes when an object is created.
+
+Question 5: Is self a keyword?
+
+Answer:
+
+No. self is not a reserved keyword, but it is the standard convention in Python.
+
+Question 6: What is inheritance?
+
+Answer:
+
+Inheritance allows one class to reuse or extend another class. It represents an is-a relationship.
+
+Example:
+
+class EmailNotificationService(NotificationService):
+    pass
+Question 7: What is method overriding?
+
+Answer:
+
+Method overriding happens when a child class provides its own implementation of a method already defined in the parent class.
+
+Question 8: What is polymorphism?
+
+Answer:
+
+Polymorphism means the same method call can behave differently depending on the object.
+
+Example:
+
+email_service.send(message)
+sms_service.send(message)
+
+Both use send(), but behavior is different.
+
+Question 9: What is duck typing?
+
+Answer:
+
+Duck typing means Python focuses on object behavior rather than exact type. If an object has the required method, Python can use it.
+
+Question 10: What is composition?
+
+Answer:
+
+Composition means one class uses another class as a dependency. It represents a has-a relationship.
+
+Example:
+
+class ApplicationTracker:
+    def __init__(self, notification_service):
+        self.notification_service = notification_service
+Question 11: Inheritance vs composition?
+
+Answer:
+
+Inheritance is used for an is-a relationship. Composition is used for a has-a relationship. Composition is often more flexible because dependencies can be changed without changing the main class.
+
+Question 12: What is @staticmethod?
+
+Answer:
+
+A static method belongs to a class but does not access instance data or class data. It is useful for utility logic.
+
+Question 13: What is @classmethod?
+
+Answer:
+
+A class method receives the class as the first argument using cls. It can access class-level data and is often used as an alternative constructor.
+
+Question 14: What is @property?
+
+Answer:
+
+@property allows controlled access to attributes. It works like a getter and can also include setter validation.
+
+Question 15: What is a dataclass?
+
+Answer:
+
+A dataclass is a Python class mainly used to store data. It automatically generates methods like __init__ and __repr__.
+
+Question 16: What is an abstract class?
+
+Answer:
+
+An abstract class defines a contract that child classes must implement. In Python, we use ABC and @abstractmethod.
+
+Question 17: What is __str__?
+
+Answer:
+
+__str__ returns a user-friendly string representation of an object. It is used by print() and str().
+
+Question 18: What is __repr__?
+
+Answer:
+
+__repr__ returns a developer-friendly string representation useful for debugging.
+
+Question 19: What is __eq__?
+
+Answer:
+
+__eq__ defines how two objects are compared using ==.
+
+Question 20: What is a custom exception?
+
+Answer:
+
+A custom exception is a user-defined exception created by extending Python’s Exception class. It is used to represent application-specific errors.
+
+5. Java to Python OOP mapping
+Java	Python
+this	self
+constructor	__init__
+toString()	__str__()
+equals()	__eq__()
+POJO / DTO	dataclass
+interface	ABC + @abstractmethod
+static method	@staticmethod
+factory method	@classmethod
+getter/setter	@property
+package	package folder with modules
+service class	normal class with methods

@@ -1,0 +1,124 @@
+Question 1: What is a custom exception?
+
+Answer:
+
+A custom exception is a user-defined exception class created by extending Python’s Exception class. It is useful for representing application-specific or business-specific errors.
+
+Question 2: Why use custom exceptions?
+
+Answer:
+
+Custom exceptions make error handling clearer. Instead of using generic errors everywhere, we can represent business errors such as invalid status, duplicate application, or application not found.
+
+Question 3: What is raise?
+
+Answer:
+
+raise is used to throw an exception in Python.
+
+Example:
+
+raise ValueError("Invalid value")
+Question 4: Difference between raise and except?
+
+Answer:
+
+raise is used to create or throw an exception. except is used to catch and handle an exception.
+
+Question 5: Why create a base exception class?
+
+Answer:
+
+A base exception class allows us to group related exceptions. For example, all job application errors can extend ApplicationError, so we can catch them together.
+
+Example:
+
+except ApplicationError as error:
+    print(error)
+Day 12 exercises
+
+Create:
+
+week02_oop/day12_exercises.py
+Exercise 1
+
+Create a custom exception:
+
+class InvalidRoleError(Exception):
+    pass
+
+Valid roles:
+
+("Software Engineer", "Senior Software Engineer", "Tech Lead")
+
+Create a function:
+
+def validate_role(role: str) -> None:
+
+If the role is invalid, raise InvalidRoleError.
+
+Exercise 2
+
+Create a custom exception:
+
+class SalaryTooLowError(Exception):
+    pass
+
+Create a function:
+
+def validate_expected_salary(expected_salary: int) -> None:
+
+If expected salary is less than 300000, raise SalaryTooLowError.
+
+Exercise 3
+
+Create a class:
+
+SkillTracker
+
+It should have:
+
+add_skill(skill)
+find_skill(skill)
+
+Create custom exception:
+
+class SkillNotFoundError(Exception):
+    pass
+
+If skill is not found, raise SkillNotFoundError.
+
+Exercise 4
+
+Create custom exceptions:
+
+class PaymentError(Exception):
+    pass
+
+
+class InvalidAmountError(PaymentError):
+    pass
+
+
+class PaymentFailedError(PaymentError):
+    pass
+
+Create a PaymentService class.
+
+If amount is less than or equal to 0, raise InvalidAmountError.
+
+Exercise 5
+
+Update your JobApplication class.
+
+If company is empty, raise:
+
+ValueError("Company cannot be empty")
+
+If role is empty, raise:
+
+ValueError("Role cannot be empty")
+
+If status is invalid, raise:
+
+InvalidStatusError("Invalid status")

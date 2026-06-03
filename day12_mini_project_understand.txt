@@ -1,0 +1,24 @@
+Before, your code printed errors inside business methods:
+
+print("Invalid status")
+return
+
+Now your business methods raise proper exceptions:
+
+raise InvalidStatusError("Invalid status")
+
+This is better because:
+
+business logic is cleaner
+error handling is centralized
+service methods are easier to test
+different errors have different names
+code is closer to backend style
+
+In real FastAPI later, these exceptions can become HTTP responses:
+
+InvalidStatusError        -> 400 Bad Request
+ApplicationNotFoundError  -> 404 Not Found
+DuplicateApplicationError -> 409 Conflict
+
+This is why today’s lesson is important.
